@@ -1,3 +1,5 @@
+// import axios from 'axios';
+
 export const exerciseOptions = {
   method: 'GET',
   headers: {
