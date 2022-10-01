@@ -4,7 +4,7 @@ import React from 'react'
 
 const BodyPart = () => {
   return (
-    <div>BodyPart</div>
+    <div></div>
   )
 }
 
