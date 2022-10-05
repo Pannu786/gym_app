@@ -16,7 +16,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         borderBottomLeftRadius: '20px',
         width: '270px',
         height: '280px',
-        cursor: 'pointer',
+        cursor: 'pointer', 
         gap: '47px',
       }}
       onClick={() => {
