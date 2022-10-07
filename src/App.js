@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-function App() {
+function App() { 
   return (
     <Box width='400' sx={{ width: { xl: '1488px' } }} m='auto'>
       <Navbar />
@@ -17,8 +17,9 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/exercise/:id' element={<ExerciseDetail />}></Route>
       </Routes>
-      <Footer />
+      <Footer /> 
     </Box>
+    
   );
 }
 
