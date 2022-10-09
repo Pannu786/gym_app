@@ -26,6 +26,7 @@ const Exercises = ({ bodyPart, setExercises, exercises }) => {
       }
       setExercises(exercisesData);
     };
+
     fetchExercisesData();
   }, [bodyPart]);
 
@@ -36,10 +37,10 @@ const Exercises = ({ bodyPart, setExercises, exercises }) => {
     indexOfLastExercise
   );
 
-  const paginate = (e, value) => {
+  const paginate = (event, value) => {
     setCurrentPage(value);
 
-    window.scroll({ top: 1800, behavior: 'smooth' });
+    window.scrollTo({ top: 1800, behavior: 'smooth' });
   };
 
   return (
