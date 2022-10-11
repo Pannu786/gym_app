@@ -7,6 +7,20 @@ import EquipmentImage from '../assets/icons/equipment.png';
 
 const Detail = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
+  const extraDetail = [
+    {
+      icons: BodyPartImage,
+      name: bodyPart,
+    },
+    {
+      icons: TargetImage,
+      name: target,
+    },
+    {
+      icons: EquipmentImage,
+      name: equipment,
+    },
+  ];
 
   return (
     <Stack
@@ -20,6 +34,27 @@ const Detail = ({ exerciseDetail }) => {
           bup is one of the best <br /> exercises to target your {target}. It
           will help you improve your <br /> mood and gain energy.
         </Typography>
+        {extraDetail.map((item) => (
+          <Stack key={item.name} direction='row' gap='24px' alignItems='center'>
+            <Button
+              sx={{
+                background: '#fff2bd',
+                borderRadius: '50%',
+                width: '100px',
+                height: '100px',
+              }}
+            >
+              <img
+                src={item.icons}
+                alt='bodyPart'
+                style={{ width: '50px', height: '50px' }}
+              />
+            </Button>
+            <Typography textTransform='capitalize' variant='h5'>
+              {item.name}
+            </Typography>
+          </Stack>
+        ))}
       </Stack>
     </Stack>
   );
